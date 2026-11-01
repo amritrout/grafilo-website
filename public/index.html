@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Grafilo: your writing friend</title>
-  <meta name="description" content="Grafilo is an Android keyboard with AI that runs on your phone. Fix grammar, rewrite, translate, reply and dictate without sending your words anywhere.">
+  <title>Grafilo: the private AI keyboard for Android</title>
+  <meta name="description" content="Grafilo is an Android keyboard that fixes your writing, changes the tone, translates, replies and types what you say. The AI runs on your phone, so your words never leave it.">
   <meta name="theme-color" content="#e53935">
-  <meta property="og:title" content="Grafilo: your writing friend">
-  <meta property="og:description" content="An Android keyboard whose AI runs on your phone. Your words never leave it.">
+  <meta property="og:title" content="Grafilo: the private AI keyboard for Android">
+  <meta property="og:description" content="Fix, rewrite, translate, reply and dictate. The AI runs on your phone, so your words never leave it.">
   <link rel="canonical" href="https://grafilokeyboard.com/">
   <link rel="icon" href="kip.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
@@ -18,6 +18,7 @@
       <a class="brand" href="./"><img src="kip.svg" alt="" width="34" height="34">Grafilo</a>
       <nav>
         <a href="#features">Features</a>
+        <a href="#themes">Themes</a>
         <a href="#private">Privacy</a>
         <a href="#start">Get started</a>
         <a class="keep" href="support.html">Support</a>
@@ -29,29 +30,114 @@
     <section class="hero">
       <div class="wrap">
         <div>
-          <h1>Your writing friend, <em>on your phone</em>.</h1>
-          <p class="lead">Grafilo is a keyboard with a built-in AI helper called Kip. It fixes your grammar, rewrites, translates and suggests replies, and it all runs on your phone. Your words never leave it.</p>
+          <p class="eyebrow">The private AI keyboard for Android</p>
+          <h1>Write better, <em>without sharing a word.</em></h1>
+          <p class="lead">Grafilo fixes your mistakes, changes the tone, translates, writes replies and types what you say. The AI lives on your phone, so nothing you write ever leaves it.</p>
           <a class="button" href="#start">Get Grafilo</a>
-          <a class="button soft" href="#private">How it stays private</a>
-          <p class="note">Android only. Works without an internet connection after a one-time download.</p>
+          <a class="button soft" href="#features">See what it does</a>
+          <p class="note">Android only. After a one-time download it works without internet.</p>
         </div>
-        <div class="kip-stage" aria-hidden="true">
-          <img src="kip.svg" alt="" width="240" height="240">
+
+        <div class="phone" id="demo" aria-label="Interactive demo of the Grafilo AI bar">
+          <div class="demo-tabs" role="tablist" id="demo-tabs"></div>
+          <div class="screen">
+            <div class="says" id="demo-says" aria-live="polite"></div>
+
+            <div class="panel" id="panel-text">
+              <div class="tcard"><span class="label" id="t-before-label"></span><span class="txt" id="t-before"></span></div>
+              <div class="aibar" id="aibar">
+                <span class="bi" data-i="0"><i>✦</i>Polish</span>
+                <span class="bi" data-i="1"><i>☺</i>Tone</span>
+                <span class="bi" data-i="2"><i>文</i>Translate</span>
+                <span class="bi" data-i="3"><i>↩</i>Reply</span>
+                <span class="bi" data-i="4"><i>✎</i>Chat</span>
+                <img id="kip-bar" src="kip.svg" alt="Kip" width="30" height="30">
+              </div>
+              <div class="chips reveal" id="chips"></div>
+              <div class="tcard accent reveal" id="t-after-card"><span class="label" id="t-after-label"></span><span class="txt" id="t-after"></span></div>
+            </div>
+
+            <div class="panel" id="panel-voice" hidden>
+              <div class="mic" id="mic"><span></span><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path fill="currentColor" d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg></div>
+              <div class="mic-label" id="mic-label">Listening…</div>
+              <div class="tcard reveal" id="v-said"><span class="label">1. You speak</span><span class="txt">um so tell him I'll be there at, no wait, at six</span></div>
+              <div class="tcard accent reveal" id="v-clean"><span class="label" id="v-clean-label">2. Kip writes it clean</span><span class="txt" id="v-clean-text">Tell him I'll be there at six.</span></div>
+              <div class="tcard reveal" id="v-cmd"><span class="label">Then say how to change it</span><span class="txt">“Make it friendlier”</span></div>
+            </div>
+
+            <p class="demo-note" id="demo-note"></p>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="features">
       <div class="wrap">
-        <h2>Ask Kip for a hand</h2>
-        <p class="sub">Tap Kip above the keys when you want help. Otherwise it is a fast, ordinary keyboard.</p>
+        <h2>Everything you do with words, in one keyboard</h2>
+        <p class="sub">Tap the AI bar above the keys when you want help. The rest of the time it is a fast, ordinary keyboard.</p>
         <div class="grid">
-          <div class="card"><h3>Fix and polish</h3><p>Corrects grammar and spelling and keeps your voice. Pick from a few versions.</p></div>
-          <div class="card"><h3>Change the tone</h3><p>Make a message friendlier, more formal, shorter or more confident.</p></div>
-          <div class="card"><h3>Translate</h3><p>Write in your language, send in theirs, without switching apps.</p></div>
-          <div class="card"><h3>Reply for you</h3><p>Kip reads the message on screen and drafts replies. Add a short note to steer it.</p></div>
-          <div class="card"><h3>Talk instead of type</h3><p>Voice typing that is cleaned up for you, with the speech model on your phone.</p></div>
-          <div class="card"><h3>Ask anything</h3><p>A private chat with Kip. Nothing is saved when you close it.</p></div>
+          <div class="card"><h3>Polish</h3><p>Fix grammar and spelling, rephrase a sentence, or add emojis. Select part of your text to change only that part.</p></div>
+          <div class="card"><h3>Tone</h3><p>Make it professional, casual, friendly, formal, confident, empathetic, sarcastic or poetic. Add tones of your own.</p></div>
+          <div class="card"><h3>Translate</h3><p>Write in your language and send it in another, without leaving the chat.</p></div>
+          <div class="card"><h3>Reply</h3><p>Grafilo reads the message on your screen and drafts answers. Type a few words, like “say yes after 2”, and it writes the message for you.</p></div>
+          <div class="card"><h3>Voice typing</h3><p>Talk the way you normally do. The ums and false starts are cleaned up, and you can say “make it friendlier” to change the result.</p></div>
+          <div class="card"><h3>Chat</h3><p>Ask Kip anything, like how to say no politely. The chat is forgotten when you close it.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="themes">
+      <div class="wrap split">
+        <div>
+          <h2>Make it look like yours</h2>
+          <p class="sub">Pick your colours, shapes and font. Try it on the keyboard here. Every control is in the app too.</p>
+          <ul class="ticks">
+            <li><strong>Colours:</strong> nine accent colours, any colour you choose, or colours taken from your wallpaper on Android 12 and up.</li>
+            <li><strong>Backgrounds:</strong> Classic, Soft, Tonal, Vibrant and Mono, with dark and true black for OLED screens.</li>
+            <li><strong>Keys:</strong> rounder or sharper corners, with or without shadows, or no key shapes at all.</li>
+            <li><strong>Type:</strong> default, serif or mono, your own font file, and bold labels.</li>
+            <li><strong>Photo backgrounds:</strong> set your own picture behind the keys and dim it to taste.</li>
+          </ul>
+        </div>
+
+        <div class="playground" id="play" aria-label="Theme playground">
+          <div class="kb" id="kb">
+            <div class="kb-text">Hi! Could you send me the report today?<span class="caret"></span></div>
+            <div class="kb-rows" id="kb-rows"></div>
+          </div>
+          <div class="controls">
+            <div class="ctl"><span>Colour</span><div class="swatches" id="swatches"></div></div>
+            <div class="ctl"><span>Style</span><div class="seg" id="seg-style">
+              <button type="button" data-v="light" aria-pressed="true">Light</button>
+              <button type="button" data-v="dark" aria-pressed="false">Dark</button>
+              <button type="button" data-v="black" aria-pressed="false">Black</button>
+            </div></div>
+            <div class="ctl"><span>Font</span><div class="seg" id="seg-font">
+              <button type="button" data-v="sans" aria-pressed="true">Default</button>
+              <button type="button" data-v="serif" aria-pressed="false">Serif</button>
+              <button type="button" data-v="mono" aria-pressed="false">Mono</button>
+            </div></div>
+            <div class="ctl"><label for="radius">Corners</label><input id="radius" type="range" min="0" max="18" value="8"></div>
+            <div class="ctl"><span>Shadows</span><div class="seg" id="seg-shadow">
+              <button type="button" data-v="on" aria-pressed="true">On</button>
+              <button type="button" data-v="off" aria-pressed="false">Off</button>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kip">
+      <div class="wrap split">
+        <div>
+          <h2>Meet Kip</h2>
+          <p class="sub">Kip is a small keycap robot who lives in your keyboard and does the helping. It thinks while it works, cheers when it is done, and wakes up when you open the keyboard after a while.</p>
+          <p class="sub">You can choose how much it moves, or turn the animations off.</p>
+        </div>
+        <div class="kips" aria-hidden="true">
+          <figure><img src="kip.svg" alt="" width="96" height="96"><figcaption>Ready</figcaption></figure>
+          <figure><img src="kip-happy.svg" alt="" width="96" height="96"><figcaption>Done</figcaption></figure>
+          <figure><img src="kip-sleep.svg" alt="" width="96" height="96"><figcaption>Napping</figcaption></figure>
         </div>
       </div>
     </section>
@@ -61,24 +147,39 @@
         <h2>Private because of where it runs</h2>
         <p class="sub">Most AI keyboards send what you type to a server. Grafilo does the work on your phone, so there is nothing to send.</p>
         <div class="promise">
-          <div><strong>On your phone</strong><span>Kip's model and the speech model live on your device.</span></div>
-          <div><strong>No account</strong><span>No sign-up and no cloud subscription for the AI.</span></div>
+          <div><strong>On your phone</strong><span>Kip's language model and the speech model are stored on your device.</span></div>
+          <div><strong>No account</strong><span>No sign-up, and no cloud subscription for the AI.</span></div>
           <div><strong>Works offline</strong><span>The internet is only used to download the models once.</span></div>
-          <div><strong>Nothing sold</strong><span>No ads, and no typing leaves your phone to be learned from.</span></div>
+          <div><strong>No ads, no tracking</strong><span>No advertising or analytics in the keyboard.</span></div>
         </div>
-        <p class="sub" style="margin-top:28px">Read the <a href="privacy.html">privacy policy</a> for exactly what the app uses and why.</p>
+        <p class="sub" style="margin-top:28px">Reply reads the screen only when you tap it, and you turn that on yourself. Read the <a href="privacy.html">privacy policy</a> for exactly what the app uses and why.</p>
       </div>
     </section>
 
-    <section id="start">
+    <section id="keyboard">
+      <div class="wrap">
+        <h2>And a proper keyboard underneath</h2>
+        <p class="sub">The AI is a bonus. The typing comes first.</p>
+        <div class="grid small">
+          <div class="card"><h3>Glide typing</h3><p>Swipe across the letters to type a word without lifting your finger.</p></div>
+          <div class="card"><h3>Suggestions and autocorrect</h3><p>Next-word suggestions and corrections that learn how you write.</p></div>
+          <div class="card"><h3>Many languages</h3><p>Add the languages you type in and switch between them as you go.</p></div>
+          <div class="card"><h3>Clipboard history</h3><p>Paste something you copied earlier, from a list.</p></div>
+          <div class="card"><h3>One-handed and floating</h3><p>Shrink the keyboard to one side, or move it where you want it.</p></div>
+          <div class="card"><h3>Incognito mode</h3><p>Stop it learning from what you type, in any app.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="start">
       <div class="wrap">
         <h2>Get started in a minute</h2>
-        <p class="sub">The first setup downloads Kip. It is a large file, so Wi-Fi is best.</p>
+        <p class="sub">Setup downloads Kip. It is a large file, so Wi-Fi is best. You can leave the app while it downloads.</p>
         <ol class="steps">
           <li><strong>Install Grafilo</strong> from Google Play.</li>
           <li><strong>Turn it on</strong> in Android's keyboard settings and choose it as your keyboard.</li>
-          <li><strong>Download Kip.</strong> You can leave the app while it downloads.</li>
-          <li><strong>Start typing.</strong> Tap Kip whenever you want help.</li>
+          <li><strong>Pick your languages</strong> for typing and for speaking.</li>
+          <li><strong>Download Kip.</strong> Then tap the AI bar whenever you want help.</li>
         </ol>
         <p style="margin-top:28px"><a class="button" href="#start" aria-disabled="true">Coming soon to Google Play</a></p>
       </div>
@@ -91,5 +192,7 @@
       <div><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="mailto:support@grafilokeyboard.com">support@grafilokeyboard.com</a></div>
     </div>
   </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
