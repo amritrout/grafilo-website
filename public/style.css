@@ -122,7 +122,7 @@ h1 em { font-style: normal; color: var(--red); }
   html { scroll-behavior: auto; }
 }
 
-section { padding: 56px 0; }
+section { padding: 56px 0; scroll-margin-top: 64px; }
 
 section.alt { background: #fff3f1; }
 
@@ -367,3 +367,17 @@ input[type="range"] { accent-color: var(--red); flex: 1; min-width: 120px; }
   .split { grid-template-columns: 1fr; gap: 28px; }
   .phone { margin: 0 auto; }
 }
+
+/* Languages band */
+.langs { background: var(--red-dark); color: #fff; padding: 64px 0; }
+.langs .eyebrow { color: #ffcdd2; }
+.langs h2 { color: #fff; }
+.langs .sub { color: #ffe0dd; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin: 0 0 28px; }
+.stats div { background: rgba(255, 255, 255, 0.1); border-radius: var(--radius); padding: 20px 22px; }
+.stats strong { display: block; font-size: clamp(34px, 5vw, 48px); line-height: 1.1; letter-spacing: -0.02em; }
+.stats span { color: #ffe0dd; font-size: 15px; }
+.lang-chips { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 0 0 22px; }
+.lang-chips li { background: #fff; color: var(--ink); border-radius: 999px; padding: 8px 18px; font-weight: 600; }
+.lang-chips small { color: var(--red-dark); font-weight: 600; font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; margin-left: 4px; }
+.lang-note { color: #ffe0dd; font-size: 15px; max-width: 46em; margin: 0; }
